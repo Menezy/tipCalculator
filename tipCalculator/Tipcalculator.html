@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!--External Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Internal Styles -->
+	<style>
+        @media (max-width: 62em) {
+            .navbar-nav {
+                padding-top: .425rem;
+                padding-left: 0.75rem;
+            }
+            .navbar-nav .nav-item {
+                float: none;
+            }
+            .navbar-brand {
+                float: right;
+            }
+            .navbar-brand,
+            .navbar-nav .nav-item {
+                display: block;
+            }
+            .navbar-nav .nav-item + .nav-item {
+                margin-left: 0;
+            }
+            .dropdown-menu {
+                position: relative;
+                float: none;
+            }
+        }
+    </style>
+    <!-- External Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+   
+	
+
+    <title>Tip Calculator</title>
+<style>
+    h3{
+        margin-top: 30px;
+    }
+    h6{
+        margin-bottom: 5px;
+    }
+    #totaltip small {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+    #totaltip {
+        font-size: 30px;
+        margin-top: 5px;
+        text-align: center;
+    }
+    
+    #totaltip:before {
+        content: "Tip Amount";
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        text-transform: uppercase;
+    }
+    
+    </style>
+	
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+       
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">CodeMenezy</a>
+
+        
+    
+    </nav>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                
+        <div class="panel-heading ">
+            <h3 class="text-center">Tip Calculator</h3>
+            <br>
+
+          	<div id="calculator"></div>
+            <h6>How much was the bill?</h6>
+            <br>
+            <div class="input-group">
+                  <span class="input-group-addon">₦</span>
+                  <input id="billamt" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                </div>
+            <br>
+            <h6>How was your service?</h6>
+            <br>
+            
+            <select id="serviceQual" class="selectpicker btn btn-primary btn-lg btn-block">
+              <option disabled selected value="0">select an option</option>
+              <option value="0.3">30% - Excellent</option>
+              <option value="0.2">20% - Good</option>
+              <option value="0.15">15% - It was OK</option>
+              <option value="0.1">10% - Bad</option> 
+              <option value="0.05">5% - Terrible</option> 
+            </select>
+            <br>
+            <h6>How many people are sharing the bill?</h6>
+            <br>
+                <div class="input-group">
+                    
+    <input id="peopleamt" type="text" class="form-control" aria-describedby="basic-addon2">
+            <span class="input-group-addon" id="basic-addon2">People</span>
+                </div>
+            </div>
+                <br>
+                
+    <input type="button" id="calculate" class="btn btn-primary btn-lg btn-block" value="Calculate">
+                <br>
+    
+            <div id="totalTip" class="text-center">
+                <br>
+                <span id="tip"><h4><bold><span></span>0.00</bold></h4></span>
+                
+            <small id="each">each</small>
+
+        
+         </div> 
+            <div class="col-md-4"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/tipcalculator.js"></script> 
+     
+</body>        
+
+</html>
